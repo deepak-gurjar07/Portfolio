@@ -20,7 +20,7 @@ function App() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3001/send', formData);
+      await axios.post('/api/send', formData);
       alert('Message sent successfully');
     } catch (error) {
       alert('Error sending message');
