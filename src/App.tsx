@@ -27,7 +27,6 @@ function App() {
       setSuccess(true);
 
       setTimeout(() => setSuccess(false), 5000);
-      alert('Message sent successfully');
     } catch (error) {
       alert('Error sending message');
     }
@@ -93,11 +92,11 @@ function App() {
               Creative developer crafting digital experiences through code and design
             </p>
             <div className="flex gap-6">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+              <a href="github.com/deepak-gurjar07" target="_blank" rel="noopener noreferrer" 
                  className="p-3 rounded-full bg-gray-800/50 hover:bg-purple-500/20 backdrop-blur-sm transition-all group">
                 <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+              <a href="linkedin.com/in/deepakgurjar03" target="_blank" rel="noopener noreferrer"
                  className="p-3 rounded-full bg-gray-800/50 hover:bg-purple-500/20 backdrop-blur-sm transition-all group">
                 <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
@@ -243,13 +242,13 @@ function App() {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h3 className="text-xl font-bold mb-2">AI-Powered Analytics Platform</h3>
-                    <p className="text-gray-300 text-sm mb-4">A comprehensive analytics solution using machine learning</p>
+                    <p className="text-gray-300 text-sm mb-4">My personal portfolio website created using TypeScript and ReactJs</p>
                     <div className="flex gap-4">
-                      <a href="#" className="px-4 py-2 bg-purple-500/20 backdrop-blur-sm rounded-lg hover:bg-purple-500/30 transition-colors flex items-center gap-2 text-sm">
+                      <a href="https://deepakgurjar.vercel.app/" className="px-4 py-2 bg-purple-500/20 backdrop-blur-sm rounded-lg hover:bg-purple-500/30 transition-colors flex items-center gap-2 text-sm">
                         <ExternalLink className="w-4 h-4" />
                         Live Demo
                       </a>
-                      <a href="#" className="px-4 py-2 bg-gray-800/50 backdrop-blur-sm rounded-lg hover:bg-gray-800/70 transition-colors flex items-center gap-2 text-sm">
+                      <a href="https://github.com/deepak-gurjar07/Portfolio/tree/master" className="px-4 py-2 bg-gray-800/50 backdrop-blur-sm rounded-lg hover:bg-gray-800/70 transition-colors flex items-center gap-2 text-sm">
                         <Github className="w-4 h-4" />
                         Source
                       </a>
@@ -338,11 +337,11 @@ function App() {
                       <Mail className="w-4 h-4" />
                       gurjardeepak206@gmail.com
                     </a>
-                    <a href="https://github.com" className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors text-sm">
+                    <a href="https://github.com/deepak-gurjar07" className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors text-sm">
                       <Github className="w-4 h-4" />
                       github.com/deepak-gurjar07
                     </a>
-                    <a href="https://linkedin.com" className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors text-sm">
+                    <a href="https://linkedin.com/in/deepakgurjar03" className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors text-sm">
                       <Linkedin className="w-4 h-4" />
                       linkedin.com/in/deepakgurjar03
                     </a>
