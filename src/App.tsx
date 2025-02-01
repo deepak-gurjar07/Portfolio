@@ -20,7 +20,7 @@ function App() {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       await axios.post('/api/send', formData);
@@ -336,15 +336,15 @@ function App() {
                     I'm always open to discussing new opportunities and ideas.
                   </p>
                   <div className="space-y-4">
-                    <a href="mailto:deepakgurjar206@gmail.com" className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors text-sm">
+                    <a href="mailto:deepakgurjar206@gmail.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors text-sm">
                       <Mail className="w-4 h-4" />
                       gurjardeepak206@gmail.com
                     </a>
-                    <a href="https://github.com/deepak-gurjar07" className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors text-sm">
+                    <a href="https://github.com/deepak-gurjar07" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors text-sm">
                       <Github className="w-4 h-4" />
                       github.com/deepak-gurjar07
                     </a>
-                    <a href="https://linkedin.com/in/deepakgurjar03" className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors text-sm">
+                    <a href="https://linkedin.com/in/deepakgurjar03" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors text-sm">
                       <Linkedin className="w-4 h-4" />
                       linkedin.com/in/deepakgurjar03
                     </a>
