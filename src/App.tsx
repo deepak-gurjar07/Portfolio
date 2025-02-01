@@ -26,7 +26,13 @@ function App() {
       await axios.post('/api/send', formData);
       setSuccess(true);
 
-      const form = e.target as HTMLFormElement;
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      });
+
+      const form = e.currentTarget as HTMLFormElement;
       form.reset();
 
       setTimeout(() => setSuccess(false), 5000);
