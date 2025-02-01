@@ -1,10 +1,11 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, GraduationCap, Briefcase, Heart, Send, Code, Terminal, Globe, CheckCircle} from 'lucide-react';
 
 function App() {
 
   const [success, setSuccess] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -33,8 +34,9 @@ function App() {
         message: ''
       });
 
-      const form = e.currentTarget as HTMLFormElement;
-      form.reset();
+      if (formRef.current) {
+        formRef.current.reset();
+      }
 
       setTimeout(() => setSuccess(false), 5000);
     }else{
@@ -369,7 +371,7 @@ function App() {
                       <span className="text-sm font-medium">Message sent successfully!</span>
                     </div>
                   )}
-                  <form className="space-y-4" onSubmit={handleSubmit}>
+                  <form ref={formRef} className="space-y-4" onSubmit={handleSubmit}>
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
                       <input
