@@ -10,6 +10,8 @@ function App() {
     message: '',
   });
 
+  const [success, setSuccess] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -21,6 +23,8 @@ function App() {
     e.preventDefault();
     try {
       await axios.post('/api/send', formData);
+      setSuccess(true);
+      setTimeout(() => setSuccess(false), 5000);
       alert('Message sent successfully');
     } catch (error) {
       alert('Error sending message');
@@ -343,6 +347,11 @@ function App() {
                   </div>
                 </div>
                 <div className="p-8 lg:p-12">
+                {success && (
+                  <div className="mb-4 p-4 text-green-800 bg-green-200 border border-green-300 rounded-lg">
+                    Message sent successfully!
+                  </div>
+                )}
                   <form className="space-y-4" onSubmit={handleSubmit}>
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
