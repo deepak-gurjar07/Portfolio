@@ -23,7 +23,8 @@ function App() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await axios.post('/api/send', formData);
+      const response = await axios.post('/api/send', formData);
+      if (response.status === 200) {
       setSuccess(true);
 
       setFormData({
@@ -36,7 +37,12 @@ function App() {
       form.reset();
 
       setTimeout(() => setSuccess(false), 5000);
-    } catch (error) {
+    }else{
+      console.error('Unexpected response:', response);
+        alert('Error sending message');
+    } 
+  }catch (error) {
+      console.error('Error sending message:', error);
       alert('Error sending message');
     }
   };
