@@ -4,13 +4,14 @@ import { Github, Linkedin, Mail, ExternalLink, GraduationCap, Briefcase, Heart, 
 
 function App() {
 
+  const [success, setSuccess] = useState(false);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
 
-  const [success, setSuccess] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -24,7 +25,7 @@ function App() {
     try {
       await axios.post('/api/send', formData);
       setSuccess(true);
-      
+
       setTimeout(() => setSuccess(false), 5000);
       alert('Message sent successfully');
     } catch (error) {
@@ -333,17 +334,17 @@ function App() {
                     I'm always open to discussing new opportunities and ideas.
                   </p>
                   <div className="space-y-4">
-                    <a href="mailto:john@example.com" className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors text-sm">
+                    <a href="mailto:deepakgurjar206@gmail.com" className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors text-sm">
                       <Mail className="w-4 h-4" />
                       gurjardeepak206@gmail.com
                     </a>
                     <a href="https://github.com" className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors text-sm">
                       <Github className="w-4 h-4" />
-                      github.com/johndoe
+                      github.com/deepak-gurjar07
                     </a>
                     <a href="https://linkedin.com" className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors text-sm">
                       <Linkedin className="w-4 h-4" />
-                      linkedin.com/in/johndoe
+                      linkedin.com/in/deepakgurjar03
                     </a>
                   </div>
                 </div>
@@ -372,7 +373,7 @@ function App() {
                         type="email"
                         id="email"
                         className="w-full px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-400 transition-colors text-sm"
-                        placeholder="your@email.com"
+                        placeholder="Enter Your Email"
                         value={formData.email}
                         onChange={handleChange}
                       />
@@ -405,7 +406,7 @@ function App() {
         {/* Footer */}
         <footer className="py-6 border-t border-gray-800">
           <div className="container mx-auto px-8 text-center text-gray-400 text-sm">
-            <p>© 2024 John Doe. Crafted with passion and code.</p>
+            <p>© 2024 Deepak Gurjar. Crafted with passion and code.</p>
           </div>
         </footer>
       </div>
