@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, GraduationCap, Briefcase, Heart, Send, Code, Terminal, Globe } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, GraduationCap, Briefcase, Heart, Send, Code, Terminal, Globe, CheckCircle} from 'lucide-react';
 
 function App() {
 
@@ -24,6 +24,7 @@ function App() {
     try {
       await axios.post('/api/send', formData);
       setSuccess(true);
+      
       setTimeout(() => setSuccess(false), 5000);
       alert('Message sent successfully');
     } catch (error) {
@@ -348,10 +349,11 @@ function App() {
                 </div>
                 <div className="p-8 lg:p-12">
                 {success && (
-                  <div className="mb-4 p-4 text-green-800 bg-green-200 border border-green-300 rounded-lg">
-                    Message sent successfully!
-                  </div>
-                )}
+                    <div className="absolute top-0 left-0 right-0 p-4 bg-emerald-500/10 backdrop-blur-sm border border-emerald-500/20 rounded-t-2xl flex items-center gap-2 text-emerald-400 animate-fade-in">
+                      <CheckCircle className="w-5 h-5" />
+                      <span className="text-sm font-medium">Message sent successfully!</span>
+                    </div>
+                  )}
                   <form className="space-y-4" onSubmit={handleSubmit}>
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
